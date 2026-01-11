@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LÖW Odontología</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdentalcli5764back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+  </head>
+<body class="bg-warm-beige text-warm-dark font-sans antialiased selection:bg-warm-dark selection:text-warm-beige">
+
+    <!-- Navigation -->
+    <nav class="w-full py-4 md:py-6 px-4 md:px-12 text-warm-dark uppercase tracking-widest text-xs font-medium border-b border-warm-dark/10 bg-warm-beige/95 backdrop-blur-sm fixed top-0 z-50">
+        <!-- Mobile Layout -->
+        <div class="flex justify-center items-center md:hidden relative">
+            <!-- Logo Centrado -->
+            <div class="font-serif text-lg tracking-tight text-warm-dark normal-case">
+                LÖW Odontología
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="hamburger-btn" class="absolute right-0 w-8 h-8 flex flex-col justify-center items-center gap-1.5 hover:opacity-60 transition-opacity z-50">
+                <span class="w-6 h-0.5 bg-accent transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-accent transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-accent transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[80%] bg-warm-dark flex-col pt-20 px-6 shadow-2xl md:hidden z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <a href="#servicios" class="hover:opacity-80 transition-opacity text-lg py-4 border-b border-warm-beige/20 text-warm-beige">Servicios</a>
+            <a href="#profesionales" class="hover:opacity-80 transition-opacity text-lg py-4 border-b border-warm-beige/20 text-warm-beige">Equipo</a>
+            <a href="#testimonios" class="hover:opacity-80 transition-opacity text-lg py-4 border-b border-warm-beige/20 text-warm-beige">Testimonios</a>
+            <a href="#contacto" class="hover:opacity-80 transition-opacity text-lg py-4 border-b border-warm-beige/20 text-warm-beige">Contacto</a>
+            <a href="https://wa.me/5491170845689" class="hover:opacity-80 transition-opacity text-lg py-4 text-warm-beige">WhatsApp</a>
+        </div>
+
+        <!-- Desktop Layout -->
+        <div class="hidden md:flex justify-between items-center">
+            <div class="flex gap-8">
+                <a href="#servicios" class="hover:opacity-60 transition-opacity">Servicios</a>
+                <a href="#profesionales" class="hover:opacity-60 transition-opacity">Equipo</a>
+                <a href="#testimonios" class="hover:opacity-60 transition-opacity">Testimonios</a>
+            </div>
+            <div class="font-serif text-2xl tracking-tight text-warm-dark normal-case">
+                LÖW Odontología
+            </div>
+            <div class="flex gap-8">
+                <a href="#contacto" class="hover:opacity-60 transition-opacity">Contacto</a>
+                <a href="https://wa.me/5491170845689" class="hover:opacity-60 transition-opacity">WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="w-full max-w-7xl mx-auto px-4 md:px-12 pt-28 sm:pt-32 pb-8 md:pt-40 md:pb-20 min-h-screen flex items-center">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-12">
+            <div class="max-w-3xl">
+                <!-- Generation Badge -->
+                <div class="inline-flex items-center gap-2 mb-4 md:mb-6 glass-card px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-warm-dark/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse text-accent md:w-4 md:h-4">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                        <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>
+                    </svg>
+                    <span class="text-xs font-medium text-warm-dark tracking-wide uppercase">Cuarta Generación</span>
+                </div>
+
+                <h1 class="font-serif text-warm-dark text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-6 md:mb-8">
+                    Cuidando tu <br>
+                    <span class="italic font-normal opacity-80">sonrisa</span>
+                </h1>
+
+                <p class="text-base md:text-lg lg:text-xl text-warm-dark/80 leading-relaxed max-w-2xl font-light mb-6 md:mb-8">
+                    Somos un consultorio odontológico familiar de cuarta generación, comprometidos con brindar una atención cercana, personalizada y llena de dedicación.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <a href="https://wa.me/5491170845689" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-warm-dark px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium text-sm md:text-base hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check md:w-5 md:h-5">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                            <line x1="16" x2="16" y1="2" y2="6"/>
+                            <line x1="8" x2="8" y1="2" y2="6"/>
+                            <line x1="3" x2="21" y1="10" y2="10"/>
+                            <path d="m9 16 2 2 4-4"/>
+                        </svg>
+                        Pedí tu Turno
+                    </a>
+                    <a href="#servicios" class="inline-flex items-center justify-center gap-2 border-2 border-warm-dark/30 px-6 md:px-8 py-3 md:py-4 rounded-full text-warm-dark font-medium text-sm md:text-base hover:bg-warm-dark/5 transition-all duration-300">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+
+            <!-- Handwritten Accent -->
+            <div class="hidden md:block rotate-[-6deg] translate-y-[-2rem]">
+                <p class="font-handwritten text-warm-dark text-4xl">
+                    nuevo espacio
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-left text-warm-dark w-8 h-8 ml-0 mt-2 stroke-[1.5]">
+                    <path d="m17 7-10 10"/>
+                    <path d="M7 7v10h10"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- About / New Space Section -->
+    <section class="w-full px-4 md:px-12 min-h-screen flex flex-col justify-center py-12 md:py-20">
+        <div class="relative w-full h-[50vh] sm:h-[60vh] md:h-[80vh] overflow-hidden rounded-[1.5rem] md:rounded-[3rem]">
+            <img src="assets/images/Consultorio.jpg"
+                 alt="Exterior del nuevo consultorio odontológico LÖW en Av. Maipú 710, Vicente López - Espacio moderno y acogedor"
+                 class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 w-full p-4 sm:p-6 md:p-12 bg-gradient-to-t from-warm-dark/80 to-transparent">
+                <span class="text-warm-beige font-serif text-2xl sm:text-3xl md:text-5xl tracking-tight">Nuestro Nuevo Espacio</span>
+            </div>
+        </div>
+
+        <!-- About Text - Enhanced Design -->
+        <div class="max-w-4xl mx-auto mt-8 md:mt-16 relative px-2">
+            <!-- Decorative accent -->
+            <div class="absolute -left-4 top-0 w-1 h-24 bg-accent rounded-full hidden md:block"></div>
+
+            <div class="bg-gradient-to-br from-warm-beige to-warm-beige/50 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-12 shadow-xl border border-warm-dark/5">
+                <div class="space-y-4 md:space-y-6">
+                    <p class="text-base sm:text-lg md:text-2xl text-warm-dark leading-relaxed font-light">
+                        Hoy estamos felices de recibirte en nuestro <strong class="font-semibold text-accent">nuevo espacio</strong>: más amplio, más cálido y pensado <strong class="font-semibold">para seguir ofreciendo la excelencia que nos caracteriza</strong>.
+                        <strong class="font-semibold">Cada rincón fue diseñado para tu bienestar</strong>.
+                    </p>
+
+                    <div class="w-12 md:w-16 h-0.5 bg-accent/30 mx-auto md:mx-0"></div>
+
+                    <p class="text-base sm:text-lg md:text-2xl text-warm-dark leading-relaxed font-light">
+                        Incorporamos <strong class="font-semibold text-accent">tecnología de vanguardia</strong> en un entorno cómodo y acogedor. Contamos con un equipo que combina experiencia, cercanía y verdadera pasión por lo que hace.
+                    </p>
+
+                    <div class="pt-4 md:pt-6 mt-4 md:mt-6 border-t border-warm-dark/10">
+                        <p class="text-lg sm:text-xl md:text-3xl text-warm-dark font-medium leading-relaxed text-center italic">
+                            Porque sonreír también es confiar. <br>
+                            <span class="text-accent">Tu sonrisa es parte de nuestra historia.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Optional decorative quote marks -->
+                <div class="absolute -top-4 -left-4 text-6xl text-accent/20 font-serif leading-none hidden md:block">"</div>
+                <div class="absolute -bottom-4 -right-4 text-6xl text-accent/20 font-serif leading-none hidden md:block">"</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="w-full max-w-7xl mx-auto px-4 md:px-12 py-12 md:py-32 min-h-screen flex flex-col justify-center">
+        <div class="text-center mb-12 md:mb-16">
+            <span class="text-accent font-medium tracking-wide text-xs md:text-sm mb-2 block uppercase">Atención Integral</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-6xl text-warm-dark tracking-tight mb-3 md:mb-4">Nuestros Servicios</h2>
+            <p class="text-sm md:text-base text-warm-dark/70 max-w-2xl mx-auto font-light px-4">
+                Ofrecemos una amplia gama de tratamientos odontológicos con tecnología de última generación.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <!-- Service Card 1 -->
+            <div class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smile md:w-6 md:h-6">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                        <line x1="9" x2="9.01" y1="9" y2="9"/>
+                        <line x1="15" x2="15.01" y1="9" y2="9"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Odontología General</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Atención preventiva y tratamientos de rutina para mantener tu salud bucal.</p>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-stethoscope">
+                        <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+                        <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+                        <circle cx="20" cy="10" r="2"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Endodoncia</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Tratamientos de conducto para salvar piezas dentales afectadas.</p>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="glass-card p-8 rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-heart">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Periodoncia</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Cuidado especializado de encías y tejidos de soporte dental.</p>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="glass-card p-8 rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-sparkles">
+                        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Diseño de Sonrisa</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Carillas y coronas de porcelana para una sonrisa perfecta.</p>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="glass-card p-8 rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-wrench">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Implantes Dentales</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Cirugía bucomaxilar e implantes de última generación.</p>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="glass-card p-8 rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-align-justify">
+                        <line x1="3" x2="21" y1="6" y2="6"/>
+                        <line x1="3" x2="21" y1="12" y2="12"/>
+                        <line x1="3" x2="21" y1="18" y2="18"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Ortodoncia</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Brackets tradicionales y alineadores invisibles para todas las edades.</p>
+            </div>
+
+            <!-- Service Card 7 -->
+            <div class="glass-card p-8 rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-shield">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Protectores Bucales</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Placas de bruxismo y protectores deportivos personalizados.</p>
+            </div>
+
+            <!-- Service Card 8 -->
+            <div class="glass-card p-8 rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-baby">
+                        <path d="M9 12h.01"/>
+                        <path d="M15 12h.01"/>
+                        <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/>
+                        <path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Odontopediatría</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Atención especializada para los más pequeños en un ambiente amigable.</p>
+            </div>
+
+            <!-- Service Card 9 -->
+            <div class="glass-card p-8 rounded-3xl border border-warm-dark/10 hover:border-accent/30 transition-all duration-300 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:mb-6 text-accent group-hover:bg-accent/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide- md:w-6 md:h-6 lucide-activity">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-warm-dark mb-2 md:mb-3">Urgencias</h3>
+                <p class="text-warm-dark/70 text-sm leading-relaxed">Atención de emergencias dentales con respuesta inmediata.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios de Pacientes -->
+    <section id="testimonios" class="w-full max-w-7xl mx-auto px-4 md:px-12 py-12 md:py-32 min-h-screen flex flex-col justify-center">
+        <!-- Before/After Showcase -->
+        <div class="mt-0 md:mt-24 bg-gradient-to-br from-warm-dark/5 to-accent/5 rounded-[1.5rem] md:rounded-[3rem] p-6 md:p-16 border border-warm-dark/10">
+            <div class="text-center mb-8 md:mb-12">
+                <h3 class="font-serif text-2xl sm:text-3xl md:text-5xl text-warm-dark tracking-tight mb-3 md:mb-4">Transformaciones Reales</h3>
+                <p class="text-sm md:text-base text-warm-dark/70 font-light max-w-2xl mx-auto px-2">
+                    Resultados que hablan por sí mismos. Cada tratamiento es personalizado para lograr la mejor versión de tu sonrisa.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <!-- Before/After 1 -->
+                <div class="bg-white/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-warm-dark/10">
+                    <div class="grid grid-cols-2 gap-2 md:gap-4 mb-3 md:mb-4">
+                        <div class="relative">
+                            <div class="absolute top-2 left-2 bg-warm-dark text-warm-beige px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium uppercase tracking-wide">
+                                Antes
+                            </div>
+                            <img src="assets/images/Transformaciones/resinaAntes.png"
+                                 alt="Antes del tratamiento de diseño de sonrisa"
+                                 class="w-full aspect-[4/3] object-cover rounded-lg md:rounded-xl">
+                        </div>
+                        <div class="relative">
+                            <div class="absolute top-2 left-2 bg-accent text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium uppercase tracking-wide">
+                                Después
+                            </div>
+                            <img src="assets/images/Transformaciones/resinaDespues.png"
+                                 alt="Después del tratamiento de diseño de sonrisa mostrando resultados exitosos"
+                                 class="w-full aspect-[4/3] object-cover rounded-lg md:rounded-xl">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-warm-dark font-medium mb-1 text-sm md:text-base">Restauracion de recinas</p>
+                        <p class="text-warm-dark/70 text-xs md:text-sm">Observamos restauraciones filtradas - Retiro cuidadoso de las mismas - Nuevas restauraciones en resina, devolviendo función y estética</p>
+                    </div>
+                </div>
+
+                <!-- Before/After 2 -->
+                <div class="bg-white/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-warm-dark/10">
+                    <div class="grid grid-cols-2 gap-2 md:gap-4 mb-3 md:mb-4">
+                        <div class="relative">
+                            <div class="absolute top-2 left-2 bg-warm-dark text-warm-beige px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium uppercase tracking-wide">
+                                Antes
+                            </div>
+                            <img src="assets/images/Transformaciones/protesisAntes.png"
+                                 alt="Antes del tratamiento de ortodoncia"
+                                 class="w-full aspect-[4/3] object-cover rounded-lg md:rounded-xl">
+                        </div>
+                        <div class="relative">
+                            <div class="absolute top-2 left-2 bg-accent text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium uppercase tracking-wide">
+                                Después
+                            </div>
+                            <img src="assets/images/Transformaciones/protesisDespues.png"
+                                 alt="Después del tratamiento de ortodoncia mostrando dientes perfectamente alineados"
+                                 class="w-full aspect-[4/3] object-cover rounded-lg md:rounded-xl">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-warm-dark font-medium mb-1 text-sm md:text-base">Renovacion de protesis</p>
+                        <p class="text-warm-dark/70 text-xs md:text-sm">Estas prótesis antiguas y desgastadas ya no brindaban una correcta función ni estética.Por eso realizamos su retiro y rehabilitación, devolviendo confort, armonía y una sonrisa renovada. </br> Renovar también es cuidar la salud bucal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-warm-dark/10">
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <p class="font-serif text-3xl text-warm-dark mb-2">500+</p>
+                    <p class="text-warm-dark/70 text-sm">Pacientes Satisfechos</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <p class="font-serif text-3xl text-warm-dark mb-2">4.9/5</p>
+                    <p class="text-warm-dark/70 text-sm">Calificación Promedio</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                            <path d="M3 3v18h18"/>
+                            <path d="m19 9-5 5-4-4-3 3"/>
+                        </svg>
+                    </div>
+                    <p class="font-serif text-3xl text-warm-dark mb-2">98%</p>
+                    <p class="text-warm-dark/70 text-sm">Índice de Recomendación</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Professionals Section -->
+    <section id="profesionales" class="w-full bg-gradient-to-b from-warm-beige to-warm-beige/50 py-12 md:py-32 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-12">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span class="text-accent font-semibold tracking-wide text-sm uppercase">Nuestro Equipo</span>
+                </div>
+                <h2 class="font-serif text-4xl sm:text-5xl md:text-7xl text-warm-dark tracking-tight mb-6">Profesionales</h2>
+                <p class="text-base md:text-lg text-warm-dark/70 max-w-2xl mx-auto leading-relaxed">
+                    Especialistas comprometidos con tu salud bucal, combinando experiencia académica con atención personalizada.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+                <!-- Professional 1 - Irina -->
+                <article class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                        <!-- Image Container -->
+                        <div class="relative h-[380px] w-full overflow-hidden bg-gradient-to-br from-warm-beige/30 to-accent/20">
+                            <!-- Main Image -->
+                            <img src="assets/images/Irina.png"
+                                 alt="Dra. Irina Löw, Odontóloga UBA, directora de LÖW Odontología"
+                                 class="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105">
+
+                            <!-- Subtle Gradient Overlay Bottom -->
+                            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-warm-dark/40 to-transparent pointer-events-none"></div>
+
+                            <!-- Decorative Border Frame -->
+                            <div class="absolute inset-3 border-2 border-white/30 rounded-2xl pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100"></div>
+
+                            <!-- Role Badge -->
+                            <div class="absolute top-6 right-6 z-10">
+                                <span class="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-full text-xs font-bold uppercase tracking-wider shadow-xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                        <path d="M2 17l10 5 10-5"/>
+                                        <path d="M2 12l10 5 10-5"/>
+                                    </svg>
+                                    Directora
+                                </span>
+                            </div>
+
+                            <!-- Bottom Accent Bar -->
+                            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent to-transparent"></div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-8">
+                            <!-- Name -->
+                            <h3 class="font-serif text-3xl text-warm-dark mb-4 leading-tight min-h-[80px] flex items-center">Dra. Irina Löw</h3>
+
+                            <!-- Credentials -->
+                            <div class="flex gap-2 mb-5">
+                                <span class="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-xs font-bold">MN 37051</span>
+                                <span class="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-xs font-bold">MP 44905</span>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="w-12 h-1 bg-accent/30 rounded-full mb-5"></div>
+
+                            <!-- Info -->
+                            <div class="space-y-3">
+                                <p class="text-warm-dark/60 text-sm font-medium">
+                                    Odontóloga UBA
+                                </p>
+                                <p class="text-warm-dark/60 text-sm font-medium">
+                                    Docente UBA en Clínica Estomatológica
+                                </p>
+                                <div class="pt-3 border-t border-warm-dark/10">
+                                    <p class="text-warm-dark font-semibold text-sm leading-relaxed">
+                                        Especialista en Rehabilitación, Implantes, Ortodoncia y Estomatología
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Professional 2 - Anna Maria -->
+                <article class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                        <!-- Image Container -->
+                        <div class="relative h-[380px] w-full overflow-hidden bg-gradient-to-br from-warm-beige/30 to-accent/20">
+                            <!-- Main Image -->
+                            <img src="assets/images/AnnaMaria.png"
+                                 alt="Dra. Anna Maria Scoufalos, Odontóloga UBA"
+                                 class="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105">
+
+                            <!-- Subtle Gradient Overlay Bottom -->
+                            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-warm-dark/40 to-transparent pointer-events-none"></div>
+
+                            <!-- Decorative Border Frame -->
+                            <div class="absolute inset-3 border-2 border-white/30 rounded-2xl pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100"></div>
+
+                            <!-- Bottom Accent Bar -->
+                            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent to-transparent"></div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-8">
+                            <!-- Name -->
+                            <h3 class="font-serif text-3xl text-warm-dark mb-4 leading-tight min-h-[80px] flex items-center">Dra. Anna Maria Scoufalos</h3>
+
+                            <!-- Credentials -->
+                            <div class="flex gap-2 mb-5">
+                                <span class="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-xs font-bold">MN 44966</span>
+                                <span class="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-xs font-bold">MP 45920</span>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="w-12 h-1 bg-accent/30 rounded-full mb-5"></div>
+
+                            <!-- Info -->
+                            <div class="space-y-3">
+                                <p class="text-warm-dark/60 text-sm font-medium">
+                                    Odontóloga UBA
+                                </p>
+                                <p class="text-warm-dark/60 text-sm font-medium">
+                                    Coordinadora Programa Salud Escolar (Min. Salud CABA)
+                                </p>
+                                <div class="pt-3 border-t border-warm-dark/10">
+                                    <p class="text-warm-dark font-semibold text-sm leading-relaxed">
+                                        Especialista en Rehabilitación y Ortodoncia
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Professional 3 - Jonathan -->
+                <article class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                        <!-- Image Container -->
+                        <div class="relative h-[380px] w-full overflow-hidden bg-gradient-to-br from-warm-beige/30 to-accent/20">
+                            <!-- Main Image -->
+                            <img src="assets/images/Jonathan.png"
+                                 alt="Dr. Jonathan Alexis Condal, Odontólogo UBA"
+                                 class="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105">
+
+                            <!-- Subtle Gradient Overlay Bottom -->
+                            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-warm-dark/40 to-transparent pointer-events-none"></div>
+
+                            <!-- Decorative Border Frame -->
+                            <div class="absolute inset-3 border-2 border-white/30 rounded-2xl pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100"></div>
+
+                            <!-- Bottom Accent Bar -->
+                            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent to-transparent"></div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-8">
+                            <!-- Name -->
+                            <h3 class="font-serif text-3xl text-warm-dark mb-4 leading-tight min-h-[80px] flex items-center">Dr. Jonathan Alexis Condal</h3>
+
+                            <!-- Credentials -->
+                            <div class="flex gap-2 mb-5">
+                                <span class="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-xs font-bold">MN 44965</span>
+                                <span class="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-xs font-bold">MP 45927</span>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="w-12 h-1 bg-accent/30 rounded-full mb-5"></div>
+
+                            <!-- Info -->
+                            <div class="space-y-3">
+                                <p class="text-warm-dark/60 text-sm font-medium">
+                                    Odontólogo UBA
+                                </p>
+                                <p class="text-warm-dark/60 text-sm font-medium">
+                                    Docente UBA en Odontología Restauradora
+                                </p>
+                                <div class="pt-3 border-t border-warm-dark/10">
+                                    <p class="text-warm-dark font-semibold text-sm leading-relaxed">
+                                        Especialista en Rehabilitación y Odontopediatría
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Hours Section -->
+    <section id="contacto" class="w-full max-w-7xl mx-auto px-4 md:px-12 py-12 md:py-32 mb-8 md:mb-16 min-h-screen flex flex-col justify-center">
+        <!-- Section Header -->
+        <div class="text-center mb-12 md:mb-16">
+            <span class="text-accent font-medium tracking-wide text-xs md:text-sm mb-2 block uppercase">Visitanos</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-6xl text-warm-dark tracking-tight mb-3 md:mb-4">Contacto</h2>
+            <p class="text-sm md:text-base text-warm-dark/70 max-w-2xl mx-auto font-light px-4">
+                Estamos para atenderte. Contactanos para agendar tu turno.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <!-- Hours & Location -->
+            <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-3xl border border-warm-dark/10">
+                <div class="flex items-center gap-2 md:gap-3 mb-6 md:mb-8">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock md:w-6 md:h-6">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl md:text-2xl text-warm-dark">Horarios</h3>
+                </div>
+
+                <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                    <div class="flex justify-between items-center pb-3 md:pb-4 border-b border-warm-dark/10">
+                        <span class="text-warm-dark font-medium text-sm md:text-base">Martes a Viernes</span>
+                        <span class="text-warm-dark/70 text-sm md:text-base">9:00 - 18:00 hs</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-3 md:pb-4 border-b border-warm-dark/10">
+                        <span class="text-warm-dark font-medium text-sm md:text-base">Sábados</span>
+                        <span class="text-warm-dark/70 text-sm md:text-base">9:00 - 13:00 hs</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-warm-dark font-medium text-sm md:text-base">Domingos y Lunes</span>
+                        <span class="text-warm-dark/70 text-sm md:text-base">Cerrado</span>
+                    </div>
+                </div>
+
+                <div class="pt-4 md:pt-6 border-t border-warm-dark/10">
+                    <div class="flex items-start gap-2 md:gap-3 mb-4 md:mb-6">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin md:w-5 md:h-5">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-warm-dark font-medium mb-1 text-sm md:text-base">Av. Maipú 710</p>
+                            <p class="text-warm-dark/70 text-xs md:text-sm">Vicente López, Buenos Aires</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5491170845689" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-warm-dark px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium text-sm md:text-base hover:shadow-glow transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone md:w-5 md:h-5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        WhatsApp: 11-7084-5689
+                    </a>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="rounded-2xl md:rounded-3xl overflow-hidden h-[350px] md:h-[450px] border border-warm-dark/10">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.1234567890!2d-58.4777!3d-34.5344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6b8e3d4c5d1%3A0x1234567890abcdef!2sAv.%20Maip%C3%BA%20710%2C%20Vicente%20L%C3%B3pez%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1234567890123"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="w-full px-4 md:px-12 pt-4 md:pt-10 pb-3 md:pb-8 bg-gradient-to-br from-warm-dark via-warm-dark to-[#2C2C2C] text-warm-beige border-t border-warm-dark/10 relative overflow-hidden">
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent/50 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8 mb-3 pb-3 md:mb-5 md:pb-5 border-b border-warm-beige/10">
+            <!-- Brand Column -->
+            <div class="col-span-2 md:col-span-1 text-center md:text-left">
+                <span class="font-serif text-lg md:text-3xl mb-1 md:mb-1.5 block text-white">LÖW Odontología</span>
+                <p class="text-warm-beige/70 text-xs md:text-sm mb-1.5 md:mb-2 leading-relaxed">Cuarta generación cuidando tu sonrisa</p>
+
+                <!-- Social Media Icons -->
+                <div class="flex gap-2 md:gap-2.5 justify-center mt-2 md:mt-3 md:justify-start">
+                    <a href="#" class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-warm-beige/10 hover:bg-accent/20 flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-[15px] md:h-[15px]">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-warm-beige/10 hover:bg-accent/20 flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-[15px] md:h-[15px]">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="col-span-1 text-left">
+                <h4 class="text-white font-semibold text-[10px] md:text-sm mb-1 md:mb-3 uppercase tracking-wider">Enlaces Rápidos</h4>
+                <nav class="flex flex-col gap-0.5 md:gap-1.5">
+                    <a href="#servicios" class="text-warm-beige/80 hover:text-white text-[10px] md:text-sm transition-all duration-300">Servicios</a>
+                    <a href="#profesionales" class="text-warm-beige/80 hover:text-white text-[10px] md:text-sm transition-all duration-300">Nuestro Equipo</a>
+                    <a href="#contacto" class="text-warm-beige/80 hover:text-white text-[10px] md:text-sm transition-all duration-300">Contacto</a>
+                    <a href="https://wa.me/5491170845689" class="text-warm-beige/80 hover:text-white text-[10px] md:text-sm transition-all duration-300">Solicitar Turno</a>
+                </nav>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="col-span-1 text-left">
+                <h4 class="text-white font-semibold text-[10px] md:text-sm mb-1 md:mb-3 uppercase tracking-wider">Contacto</h4>
+                <div class="space-y-1 md:space-y-2 text-[10px] md:text-sm">
+                    <div class="flex items-start gap-1 md:gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 shrink-0 md:w-[14px] md:h-[14px]">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <div class="text-left">
+                            <p class="text-warm-beige/90 text-[10px] md:text-sm leading-tight">Av. Maipú 710</p>
+                            <p class="text-warm-beige/70 text-[8px] md:text-xs leading-tight">Vicente López</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-1 md:gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 shrink-0 md:w-[14px] md:h-[14px]">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <div class="text-left">
+                            <p class="text-warm-beige/90 text-[10px] md:text-sm leading-tight">11-7084-5689</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-1 md:gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 shrink-0 md:w-[14px] md:h-[14px]">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <div class="text-left">
+                            <p class="text-warm-beige/90 text-[10px] md:text-sm leading-tight">Mar-Vie: 9:00-18:00</p>
+                            <p class="text-warm-beige/70 text-[8px] md:text-xs leading-tight">Sáb: 9:00-13:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-3 pt-2 md:pt-4">
+            <!-- Copyright -->
+            <div class="text-center md:text-left">
+                <p class="text-warm-beige/60 text-[10px] md:text-xs">© 2026 LÖW Odontología • Todos los derechos reservados</p>
+            </div>
+
+            <!-- Developer Credit -->
+            <div class="flex items-center gap-1.5 md:gap-2 group">
+                <span class="text-warm-beige/60 text-[10px] md:text-xs">Desarrollada por</span>
+                <div class="flex items-center gap-0.5 font-semibold text-xs md:text-sm tracking-wide transition-all duration-300 group-hover:scale-105">
+                    <span class="text-white">Tuki</span>
+                    <span class="text-[#9333EA]">Code</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5491170845689"
+       class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 z-50 group"
+       aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 640 640" fill="white">
+            <path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216.1 251.8 215.9C248.6 215.7 245 215.6 241.3 215.6C237.6 215.6 231.6 216.9 226.5 222.5C221.4 228.1 206.4 242.3 206.4 268.9C206.4 295.5 226.9 321.4 229.6 325.1C232.4 328.8 268.9 384.5 323.9 407.3C337.6 413.1 348.4 416.6 356.9 419.1C370.7 423.5 383.3 422.9 393.4 421.4C404.5 419.7 428.3 407.9 433 394.9C437.6 381.9 437.6 370.8 436.2 368.6C434.8 366.3 430.6 364.9 424.6 362.1C418.6 359.3 391.3 346 386.2 344.1C381.1 342.2 377.4 341.3 373.7 346.9C370 352.5 359.4 364.9 356.1 368.7C352.9 372.4 349.6 372.9 344.1 370.1C311.5 353.8 290.1 341 268.6 304.1C262.9 294.3 274.3 295 284.9 273.8C286.7 270.1 285.8 266.9 284.4 264.1C283 261.3 271.9 234 267.3 222.9C262.8 212.1 258.2 213.7 254.8 213.5C251.6 213.3 247.9 213.2 244.2 213.2C240.5 213.2 234.5 214.5 229.4 220.1C224.3 225.7 209.3 239.9 209.3 266.5C209.3 293.1 229.8 319 232.5 322.7C235.3 326.4 271.8 382.1 326.8 404.9C340.5 410.7 351.3 414.2 359.8 416.7C373.6 421.1 386.2 420.5 396.3 419C407.4 417.3 431.2 405.5 435.9 392.5C440.5 379.5 440.5 368.4 439.1 366.2C437.7 363.9 433.6 362.5 427.6 359.7z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (hamburgerBtn && mobileMenu) {
+            hamburgerBtn.addEventListener('click', function() {
+                const isOpen = !mobileMenu.classList.contains('translate-x-full');
+
+                if (isOpen) {
+                    // Close menu
+                    mobileMenu.classList.add('translate-x-full');
+                    mobileMenu.classList.remove('translate-x-0');
+                } else {
+                    // Open menu
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                }
+
+                // Animate hamburger icon
+                const spans = hamburgerBtn.querySelectorAll('span');
+                if (!isOpen) {
+                    spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+                    // Change color to white when menu is open
+                    spans.forEach(span => span.classList.add('bg-warm-beige'));
+                    spans.forEach(span => span.classList.remove('bg-accent'));
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                    // Change color back to brown
+                    spans.forEach(span => span.classList.remove('bg-warm-beige'));
+                    spans.forEach(span => span.classList.add('bg-accent'));
+                }
+            });
+
+            // Close menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                    mobileMenu.classList.remove('translate-x-0');
+
+                    const spans = hamburgerBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                    // Change color back to brown
+                    spans.forEach(span => span.classList.remove('bg-warm-beige'));
+                    spans.forEach(span => span.classList.add('bg-accent'));
+                });
+            });
+        }
+
+        lucide.createIcons();
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>
