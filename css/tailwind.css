@@ -142,11 +142,11 @@ html {
     color: var(--warm-beige);
 }
 
-/* Animations */
-@keyframes fadeIn {
+/* Scroll Animations */
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -154,8 +154,81 @@ html {
     }
 }
 
-.animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scroll Animation Classes */
+.scroll-animate {
+    opacity: 0;
+}
+
+.scroll-animate.animate-in {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-fade-up.animate-in {
+    animation-name: fadeInUp;
+}
+
+.scroll-fade-left.animate-in {
+    animation-name: fadeInLeft;
+}
+
+.scroll-fade-right.animate-in {
+    animation-name: fadeInRight;
+}
+
+.scroll-scale.animate-in {
+    animation-name: scaleIn;
+}
+
+/* Stagger delays for children */
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.stagger-2 {
+    animation-delay: 0.2s;
+}
+
+.stagger-3 {
+    animation-delay: 0.3s;
+}
+
+.stagger-4 {
+    animation-delay: 0.4s;
 }
 
 /* Responsive Typography */
